@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentSebha">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/sebhaIV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.30"
+        android:adjustViewBounds="true"
+        android:src="@drawable/sebha"
+        android:layout_marginTop="70sp"
+        />
 
-</FrameLayout>
+    <TextView
+    android:id="@+id/numOfTasbehTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/sebhaIV"
+    android:text="عدد التسبيحات"
+    android:textSize="25sp"
+    android:textStyle="bold"
+    android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/numOfTasbehButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numOfTasbehTV"
+        android:background="@drawable/button_back_ground_color"
+        android:layout_marginTop="35dp"
+        android:text="0"
+        android:textSize="30sp"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/nameOfTasbehButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numOfTasbehButton"
+        android:background="@drawable/button_back_ground_color"
+        android:layout_marginTop="15dp"
+        android:text="سبحان الله"
+        android:textSize="30sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
