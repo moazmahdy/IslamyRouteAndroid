@@ -1,5 +1,6 @@
 package com.example.islamyroute;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,7 @@ public class FragmentQuran extends Fragment {
 
     ArrayList<String> list ;
     RecyclerView suraNameRecyclerView ;
+    SuraNameAdapter adapter;
     public FragmentQuran() {
         // Required empty public constructor
     }
@@ -34,8 +36,21 @@ public class FragmentQuran extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         fillArray();
         suraNameRecyclerView = view.findViewById(R.id.suraNameRecyclerView);
-        SuraNameAdapter adapter = new SuraNameAdapter(list);
+        adapter = new SuraNameAdapter(list);
+        adapter.onItemClickListener = new SuraNameAdapter.OnItemClickListener() {
+            @Override
+            public void onClick(String suraName, int index) {
+                startQuranScreen(suraName , index+1+".txt");
+            }
+        };
         suraNameRecyclerView.setAdapter(adapter);
+    }
+
+    private void startQuranScreen(String suraName , String fileName) {
+        Intent intent = new Intent(getActivity() , SuraDetails.class);
+        intent.putExtra("sura_name" , suraName);
+        intent.putExtra("file_name" , fileName);
+        startActivity(intent);
     }
 
     public void fillArray (){
