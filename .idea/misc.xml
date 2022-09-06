@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1575" />
         <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/drawable/button_back_ground_color.xml" value="0.172" />
+        <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1575" />
+        <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/layout/activity_ahadith_details.xml" value="0.25" />
         <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/layout/activity_sura_details.xml" value="0.264" />
+        <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/layout/activity_sura_details_kotlin.xml" value="0.25" />
         <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/layout/fragment_ahadith.xml" value="0.25" />
         <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/layout/fragment_blan.xml" value="0.25" />
         <entry key="..\:/ALL/3uTools/IslamyRoute/app/src/main/res/layout/fragment_quran.xml" value="0.25" />

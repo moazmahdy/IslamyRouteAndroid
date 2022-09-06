@@ -1,5 +1,6 @@
 package com.example.islamyroute;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,13 +25,24 @@ public class AhadithAdapter extends RecyclerView.Adapter<AhadithAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.ahadithTV.setText(list.get(position));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickListener.onClick(list.get(position) , position);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    SuraNameAdapter.OnItemClickListener onItemClickListener ;
+    interface OnItemClickListener {
+        public void onClick (String suraName, int index);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

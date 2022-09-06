@@ -40,7 +40,7 @@ public class FragmentQuran extends Fragment {
         adapter.onItemClickListener = new SuraNameAdapter.OnItemClickListener() {
             @Override
             public void onClick(String suraName, int index) {
-                startQuranScreen(suraName , index+1+".txt");
+                startQuranScreen(suraName , (index+1)+".txt");
             }
         };
         suraNameRecyclerView.setAdapter(adapter);

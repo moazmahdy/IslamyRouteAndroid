@@ -3,34 +3,30 @@ package com.example.islamyroute;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.stream.Stream;
 
-public class SuraDetails extends AppCompatActivity {
+public class AhadithDetails extends AppCompatActivity {
 
-    //ArrayList<String> suraLines = new ArrayList<String>();
-    TextView suraDetailsTV ;
-    TextView suraNameTV ;
+    TextView hadithDetailsTV ;
+    TextView hadithNameTV ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sura_details);
-        suraDetailsTV = findViewById(R.id.suraDetailsTV);
-        suraNameTV = findViewById(R.id.suraDetailsSuraNameTV);
-        String suraName = getIntent().getStringExtra("sura_name");
+        setContentView(R.layout.activity_ahadith_details);
+        hadithDetailsTV = findViewById(R.id.hadithDetailsTV);
+        hadithNameTV = findViewById(R.id.hadithNameTV);
+        String hadithName = getIntent().getStringExtra("hadith_name");
         String fileName = getIntent().getStringExtra("file_name");
-        readSuraFile(fileName);
-        Log.e("file name",fileName);
-        suraNameTV.setText(suraName);
+        readHadithFile(fileName);
+        hadithNameTV.setText(hadithName);
     }
-    public void readSuraFile (String fileName){
+
+    private void readHadithFile(String fileName) {
         BufferedReader reader = null;
         try {
             reader = new BufferedReader(
@@ -39,7 +35,7 @@ public class SuraDetails extends AppCompatActivity {
             // do reading, usually loop until end of file reading
             String mLine;
             while ((mLine = reader.readLine()) != null) {
-                suraDetailsTV.append(mLine);
+                hadithDetailsTV.append(mLine);
             }
         } catch (IOException e) {
             //log the exception

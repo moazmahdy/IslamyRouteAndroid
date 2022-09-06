@@ -14,6 +14,12 @@
         android:theme="@style/Theme.IslamyRoute"
         tools:targetApi="31">
         <activity
+            android:name=".AhadithDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SuraDetailsKotlin"
+            android:exported="false" />
+        <activity
             android:name=".SuraDetails"
             android:exported="false" />
         <activity
